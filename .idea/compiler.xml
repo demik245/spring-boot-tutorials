@@ -8,9 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="thymeleafdemo" />
         <module name="cruddemo" />
+        <module name="cruddemo (5)" />
         <module name="cruddemo (1) (com.luv2code.springboot)" />
         <module name="cruddemo (3)" />
         <module name="cruddemo (4)" />
+        <module name="cruddemo (6) (com.luv2code.springboot)" />
         <module name="cruddemo (1)" />
         <module name="springcoredemo" />
         <module name="demo" />
@@ -27,6 +29,8 @@
       <module name="cruddemo (2)" options="-parameters" />
       <module name="cruddemo (3)" options="-parameters" />
       <module name="cruddemo (4)" options="-parameters" />
+      <module name="cruddemo (5)" options="-parameters" />
+      <module name="cruddemo (6) (com.luv2code.springboot)" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="mycoolapp" options="-parameters" />
       <module name="springcoredemo" options="-parameters" />
