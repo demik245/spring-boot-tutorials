@@ -4,6 +4,8 @@ import com.demik.cruddemo.dao.AppDAO;
 import com.demik.cruddemo.entity.Course;
 import com.demik.cruddemo.entity.Instructor;
 import com.demik.cruddemo.entity.InstructorDetail;
+import com.demik.cruddemo.entity.Review;
+import org.apache.logging.log4j.MarkerManager;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -43,8 +45,26 @@ public class CruddemoApplication {
 
 			// updateCourse(appDAO);
 
-			deleteCourse(appDAO);
+			// deleteCourse(appDAO);
+
+			createCourseAndReviews(appDAO);
 		};
+	}
+
+	private void createCourseAndReviews(AppDAO appDAO) {
+
+		Course course = new Course("ELO123");
+
+		course.addReview(new Review("elo"));
+		course.addReview(new Review("siema"));
+		course.addReview(new Review("eluwina"));
+
+		System.out.println("Saving course: " + course);
+		System.out.println("Saving reviews: " + course.getReviews());
+		appDAO.save(course);
+
+
+		System.out.println("Done");
 	}
 
 	private void deleteCourse(AppDAO appDAO) {
